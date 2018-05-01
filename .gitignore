@@ -1,5 +1,9 @@
+#cmake build
 build_output
 
 #clion stuff
 .idea
 cmake-build-debug
+
+#macOS
+**/.DS_Store
