@@ -295,8 +295,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					../external/lib/MoltenVK/macOS/,
-					../external/lib/MoltenVKGLSLToSPIRVConverter/macOS/,
+					"$(PROJECT_DIR)/../external/lib/MoltenVK/macOS/",
+					"$(PROJECT_DIR)/../external/lib/MoltenVKGLSLToSPIRVConverter/macOS/",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/itsSomething-lib/include",
@@ -321,8 +321,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					../external/lib/MoltenVK/macOS/,
-					../external/lib/MoltenVKGLSLToSPIRVConverter/macOS/,
+					"$(PROJECT_DIR)/../external/lib/MoltenVK/macOS/",
+					"$(PROJECT_DIR)/../external/lib/MoltenVKGLSLToSPIRVConverter/macOS/",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/itsSomething-lib/include",

@@ -30,9 +30,16 @@ set (HEADERS
 # Library
 add_library (itsSomething STATIC ${SOURCES} ${HEADERS})
 
+function(InstallLib BaseDirectory)
+    install (TARGETS itsSomething DESTINATION "${BaseDirectory}/lib")
+    install (FILES ${ROOT_HEADERS} DESTINATION "${BaseDirectory}/include")
+    install (FILES ${DATA_HEADERS} DESTINATION "${BaseDirectory}/include/data")
+    install (FILES ${UTIL_HEADERS} DESTINATION "${BaseDirectory}/include/utils")
+endfunction(InstallLib)
+
 # Installation
-set (CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/macOS/itsSomething-lib")
-install (TARGETS itsSomething DESTINATION lib)
-install (FILES ${ROOT_HEADERS} DESTINATION include)
-install (FILES ${DATA_HEADERS} DESTINATION include/data)
-install (FILES ${UTIL_HEADERS} DESTINATION include/utils)
+set (MacOSLibDirectory "${CMAKE_SOURCE_DIR}/macOS/itsSomething-lib")
+InstallLib(${MacOSLibDirectory})
+set (iOSLibDirectory "${CMAKE_SOURCE_DIR}/iOS/itsSomething-lib")
+InstallLib(${iOSLibDirectory})
+
